@@ -1,0 +1,25 @@
+﻿{% extends 'homepage/header.html' %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'blog/blogcss.css' %}">
+{% endblock %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+                <div class="content container">
+            <div class="row">
+        <div class="col-md-10">
+    {% for post in object_list %}
+        <h2 id="title"><a href="/blog/{{post.id}}" id="title">
+            <br /> {{post.title}}</a></h2> <br />
+            <p id="excerpt">{{post.body|safe|linebreaks|truncatechars_html:150}}</p>
+
+    {% endfor %}
+                </div>
+            </div>
+        </div>
+{% endblock %}

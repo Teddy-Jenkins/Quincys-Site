@@ -1,0 +1,18 @@
+﻿{% extends "homepage/header.html" %}
+
+{% block content %}
+    <h1 id="title" style="color:white">{{post.title}}</h1>
+    <img src="{{post.image.url}}" alt="">
+    <h6 class="date">on {{post.date}}</h6>
+    <div>{{post.body|safe|linebreaks}}</div>
+
+<!-- Background -->
+
+
+    {% block style %}
+    .date {
+        text-align: center;
+    }
+    {% endblock %}
+
+{% endblock %}

@@ -1,0 +1,23 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+nav {
+    background-color: #4497E6;
+}
+#title {
+    color: white !important;
+}
+.col-md-10 {
+    
+}
+#excerpt {
+    word-wrap: break-word;
+    width: 100%;
+    
+}
+p {
+    font-family: sans-serif;
+    font-size: 18pt;
+}
